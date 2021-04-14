@@ -3,10 +3,10 @@ pipeline{
     agent any
 
 // uncomment the following lines by removing /* and */ to enable
-    tools{
+/*    tools{
        maven ‘maven’ 
     }
-    
+*/    
 
     stages{
         stage(‘build’){
@@ -18,7 +18,7 @@ pipeline{
         stage(‘test’){
             steps{
                 echo 'this is the test job'
-                sh ‘mvn clean test'
+                sh ‘mvn clean test’
             }
         }
         stage(‘package’){
